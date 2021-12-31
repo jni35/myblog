@@ -1,0 +1,14 @@
+ {% extends 'base.html' %}
+ {% block content %}
+ <div class="container my-3">
+    <section>
+        <h2 class="border-bottom my-3 pb-2">포스트 등록</h2>
+        <form action="" method="post" enctype="multipart/form-data">
+        <!-- 첨부파일이 있는 경우 멀티폼 코드를 반드시 작성 enctype="multipart/form-data"-->
+            {% csrf_token %}
+                {{ form.as_p }}
+            <input type="submit" value="저장하기" class="btn btn-primary">
+        </form>
+    </section>
+</div>
+{% endblock %}
